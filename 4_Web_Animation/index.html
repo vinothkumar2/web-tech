@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Audio and Animation</title>
+        <style>
+            #myDiv{
+            width: 500px;
+            margin: 25vh auto;
+            padding: 10px;
+            text-align: center;  
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="myDiv">
+            <img src="simple.jpg" id="Myanimation"/>
+            <audio src="audio.mp3" controls onplay="playAnimation()" onpause="pauseAnimation()"></audio>
+        </div>
+
+        <script>
+            var myImageID = document.getElementById("Myanimation");
+
+            function playAnimation(){
+                myImageID.src="animation.gif";
+            }
+            function pauseAnimation(){
+                myImageID.src="simple.jpg";
+            }
+        </script>
+
+    </body>
+</html>
